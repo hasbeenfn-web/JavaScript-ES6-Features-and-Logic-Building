@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Check Largest or Smallest</h3>
+
+<input type="number" id="num" placeholder="Enter number">
+<button onclick="check()">Check</button>
+
+<p id="result"></p>
+
+<script>
+
+let arr = [10, 5, 20, 8, 3];  // fixed array
+
+function check() {
+
+    let number = Number(document.getElementById("num").value);
+
+    let largest = arr[0];
+    let smallest = arr[0];
+
+    for (let i = 1; i < arr.length; i++) {
+
+        if (arr[i] > largest) {
+            largest = arr[i];
+        }
+
+        if (arr[i] < smallest) {
+            smallest = arr[i];
+        }
+    }
+
+    if (number === largest) {
+        document.getElementById("result").textContent = "It is the Largest number";
+    } 
+    else if (number === smallest) {
+        document.getElementById("result").textContent = "It is the Smallest number";
+    } 
+    else {
+        document.getElementById("result").textContent = "It is neither Largest nor Smallest";
+    }
+
+}
+
+</script>
+
+</body>
+</html>

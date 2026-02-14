@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple DOM</title>
+</head>
+<body>
+
+    <h2 id="title">Hello</h2>
+
+    <p id="para"></p>
+
+    <button id="btn">Click Me</button>
+
+    <script>
+
+        const name = "John";
+
+        document.getElementById("btn").addEventListener("click", function() {
+
+            // textContent
+            document.getElementById("title").textContent = "Welcome";
+
+            // innerHTML
+            document.getElementById("para").innerHTML = "<b>Hello " + name + "</b>";
+
+            // style change
+            document.getElementById("para").style.color = "blue";
+
+        });
+
+    </script>
+
+</body>
+</html>
